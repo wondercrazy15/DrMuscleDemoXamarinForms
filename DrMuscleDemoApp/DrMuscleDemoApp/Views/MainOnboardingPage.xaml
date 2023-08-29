@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local= "clr-namespace:DrMuscleDemoApp"
+    x:Class="DrMuscleDemoApp.Views.MainOnboardingPage">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout.Background>           
+                <LinearGradientBrush EndPoint="0,0.1">
+                    <GradientStop Color="Gray"
+                                  Offset="0.1" />
+                    <GradientStop Color="LightGray"
+                                  Offset="1.0" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label Text="Log,Track,And Rest"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       Margin="50,40,50,0"
+                       FontSize="40"/>
+            <Label HorizontalOptions="CenterAndExpand"
+                    Margin="30,10,30,0"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"
+                    FontSize="20"
+                    Text="All in one mobile and watch app to crush your fitness goals."/>            
+            <AbsoluteLayout VerticalOptions="FillAndExpand" BackgroundColor="Transparent">                
+                <ffSvg:SvgCachedImage
+                    AbsoluteLayout.LayoutBounds="0.5,30,100,100"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Source="resource://DrMuscleDemoApp.images.gymlogo.svg"/>
+                <ffSvg:SvgCachedImage
+                    AbsoluteLayout.LayoutBounds="0.5,76,400,550"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Source="resource://DrMuscleDemoApp.images.bodybuilder.svg"/>
+                <Frame
+                    Padding="0"
+                    Margin="10,0,10,0"
+                    HasShadow="False"                    
+                    HorizontalOptions="FillAndExpand"
+                    AbsoluteLayout.LayoutBounds="0,0.8,1.0,0.10"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="#60b5f9">
+                    <Label Text="CREATE ACCOUNT"
+                           FontSize="Large"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame                   
+                    HasShadow="False"
+                    Padding="0"
+                    Margin="10,0,10,0"
+                    HorizontalOptions="FillAndExpand"
+                    AbsoluteLayout.LayoutBounds="0.2,0.94,1.0,0.10"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="red">
+                    <Label Text="LOGIN"
+                           FontSize="Large"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           />
+                </Frame>
+            </AbsoluteLayout>                                  
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

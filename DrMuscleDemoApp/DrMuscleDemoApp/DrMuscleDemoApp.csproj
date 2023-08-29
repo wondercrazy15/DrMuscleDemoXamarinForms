@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+    <None Remove="images\" />
+    <None Remove="images\fitness.svg" />
+    <None Remove="images\shiv.png" />
+    <None Remove="fitness.svg" />
+    <None Remove="images\bodybuilder.svg" />
+    <None Remove="images\logo.svg" />
+    <None Remove="images\gymlogo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\fitness.svg" />
+    <EmbeddedResource Include="images\shiv.png" />
+    <EmbeddedResource Include="fitness.svg" />
+    <EmbeddedResource Include="images\bodybuilder.svg" />
+    <EmbeddedResource Include="images\logo.svg" />
+    <EmbeddedResource Include="images\gymlogo.svg" />
+  </ItemGroup>
+</Project>
